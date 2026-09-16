@@ -1,0 +1,152 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 64px 7%;
+  background: #f7f8fa;
+  color: #17202a;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+}
+
+.eyebrow,
+.detail-label {
+  margin: 0;
+  color: #66717d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.page-header h1 {
+  margin: 10px 0 10px;
+  color: #17202a;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.intro {
+  margin-left: 6px;
+  color: #7a8490;
+  font-size: 17px;
+}
+
+.student-count {
+  padding: 10px 16px;
+  border: 1px solid #e8ebef;
+  border-radius: 30px;
+  color: #7a8490;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.student-card {
+  overflow: hidden;
+  min-width: 0;
+  border-radius: 16px;
+  border: 1px solid #e8ebef;
+  box-shadow: 0 2px 24px rgba(22, 32, 42, 0.022);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(22, 32, 42, 0.036);
+}
+
+.blue { --card-color: #e9f2ff; --card-ink: #3773ba; }
+.green { --card-color: #eaf7ef; --card-ink: #36835a; }
+.purple { --card-color: #f1edff; --card-ink: #7054ba; }
+.orange { --card-color: #fff2e7; --card-ink: #c26c32; }
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px 0;
+  color: #7a8490;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.grade-badge {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--card-color);
+  color: var(--card-ink);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.student-picture {
+  display: block;
+  width: 132px;
+  height: 132px;
+  margin: 24px auto 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--card-color);
+  color: var(--card-ink);
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  object-fit: cover;
+}
+
+.student-info {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.student-info h2 {
+  margin: 5px 0 22px;
+  color: #17202a;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #e8ebef;
+  color: #7a8490;
+  font-size: 13px;
+}
+
+.card-footer strong {
+  color: #17202a;
+}
+
+@media (max-width: 900px) {
+  .app-shell { padding: 48px 5%; }
+  .student-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .page-header { display: block; margin-bottom: 32px; }
+  .page-header h1 { font-size: 46px; }
+  .student-count { display: inline-block; margin-top: 20px; }
+  .student-grid { grid-template-columns: 1fr; }
+}
