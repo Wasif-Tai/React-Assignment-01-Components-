@@ -18,7 +18,7 @@ function App() {
       <header className="page-header">
         <div>
           <h1>Our students</h1>
-          <p className="intro">Meet the bright minds in this year&apos;s class.</p>
+          <p className="intro">Meet the bright minds in this year's class.</p>
         </div>
         <div className="student-count">{students.length} students</div>
       </header>
